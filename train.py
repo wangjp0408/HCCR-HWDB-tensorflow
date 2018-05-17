@@ -143,6 +143,7 @@ with tf.Session() as sess:
         if u.interrupted:
                     print("Interrupted on request...")
                     break
+                    
     '''              
     file1=open(log_dir+'/loss.txt','a')
     for loss in losslist:
@@ -156,6 +157,7 @@ with tf.Session() as sess:
           file2.write(acc+'\n')
     file2.close()
     '''
+    
     model_name="trainnum_%d_"%train_nums
     saver.save(sess,os.path.join(save_path,model_name),global_step=global_step)
     print('Train finished...')        
